@@ -8,14 +8,14 @@ import './HotdogForm.css';
 
 function HotdogForm({ hotdog, hotdog: { name, _id, price, image }, updateList, data, onChange }) {
   function deleteHotdog(_id) {
-    axios.delete(`http://localhost:3001/hotdogs/${_id}`).then(() => {
+    axios.delete(`/hotdogs/${_id}`).then(() => {
       const list = data.filter(hotdog => (hotdog._id === _id));
       updateList(list);
     })
   }
 
   function saveHotdog() {
-    axios.post('http://localhost:3001/hotdogs', { hotdog }).then(() => {
+    axios.post('/hotdogs', { hotdog }).then(() => {
       updateList(data);
     })
   }

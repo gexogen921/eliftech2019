@@ -15,7 +15,7 @@ mongoose.set('useFindAndModify', false);
 const dummyData = require('./dummyData');
 
 // Create mongoose connect
-mongoose.connect('mongodb://127.0.0.1:27017/eliftech', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/eliftech', {
   useNewUrlParser: true,
 });
 

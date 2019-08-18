@@ -14,7 +14,7 @@ export default function HotdogList() {
   const [toggle, handleToggle] = useState(false);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/hotdogs').then(({ data }) => {
+    axios.get('/hotdogs').then(({ data }) => {
       handleData(data.hotdogs)
     })
   }, [data.length]);
