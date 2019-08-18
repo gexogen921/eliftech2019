@@ -20,7 +20,7 @@
     "sanitize-html": "^1.20.1"
   },
   "scripts": {
-    "start": "react-scripts start && node server/app.js",
+    "start": "node server/app.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
