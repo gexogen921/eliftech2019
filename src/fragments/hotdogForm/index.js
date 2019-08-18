@@ -8,7 +8,7 @@ import './HotdogForm.css';
 
 function HotdogForm({ hotdog, hotdog: { name, _id, price, image }, updateList, data, onChange }) {
   function deleteHotdog(_id) {
-    axios.delete(`/hotdogs/${_id}`).then(() => {
+    axios.delete(`/api/hotdogs/${_id}`).then(() => {
       const list = data.filter(hotdog => (hotdog._id === _id));
       updateList(list);
     })
