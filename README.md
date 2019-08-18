@@ -1,7 +1,17 @@
-## Eliftech
+# Eliftech 
+Test task
 
-In the project directory, you can run:
+### Live
+- [Demo](https://gexogeneliftech.herokuapp.com/)
 
-### `npm start`
+### Install
+- `git clone https://github.com/gexogen921/eliftech2019`
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Setup
+- `npm i`
+- `npm start`
+- `npm run sever`
+
+### Developer
+- Stas Machulack
+- email: [thegexogen2012@gmail.com](mailto:thegexogen2012@gmail.com)
