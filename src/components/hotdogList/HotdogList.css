@@ -1,0 +1,9 @@
+.HotdogList {
+    margin: 3rem 0;
+}
+
+.HotdogList .new-item {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
