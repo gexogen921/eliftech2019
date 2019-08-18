@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -8,6 +9,7 @@ app.use(cors());
 
 app.use(bodyParser.json({ limit: '20mb' }));
 app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
+app.use(express.static(path.join(__dirname, '../')));
 
 // Config mongoose
 mongoose.set('useFindAndModify', false);
@@ -40,5 +42,15 @@ app.get('/api', function (req, res) {
   res.send('Hello World!');
 });
 
+app.use(function (err, req, res, next) {
+  res.status(err.status || 500);
+  res.json({
+    status: false,
+    message: err.message,
+  });
+});
+
 app.listen(process.env.PORT || 3000, () =>
   console.log(`App is listening on port ${process.env.PORT || 3000}!`));
+
+module.exports = app;
