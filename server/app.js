@@ -40,4 +40,4 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
-app.listen(3001, () => (console.log('App is listening on port 3001!')));
+app.listen(process.env.PORT || 3000, () => (console.log('App is listening on port 3001!')));
