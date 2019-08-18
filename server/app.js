@@ -34,9 +34,9 @@ mongoose.connection.on('error', (error) => {
 mongoose.Promise = Promise;
 
 const api = require('./routes/api.routes');
-app.use('/', api);
+app.use('/api', api);
 
-app.get('/', function (req, res) {
+app.get('/api', function (req, res) {
   res.send('Hello World!');
 });
 

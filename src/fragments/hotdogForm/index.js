@@ -15,7 +15,7 @@ function HotdogForm({ hotdog, hotdog: { name, _id, price, image }, updateList, d
   }
 
   function saveHotdog() {
-    axios.post('/hotdogs', { hotdog }).then(() => {
+    axios.post('/api/hotdogs', { hotdog }).then(() => {
       updateList(data);
     })
   }

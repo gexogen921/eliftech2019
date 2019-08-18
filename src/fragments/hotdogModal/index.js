@@ -17,7 +17,7 @@ function HotdogModal({ isOpen, handleModal, updateList, data }) {
   }
 
   function createHotdog() {
-    axios.put('/hotdogs', { hotdog }).then(({ data: { hotdog } }) => {
+    axios.put('/api/hotdogs', { hotdog }).then(({ data: { hotdog } }) => {
       data.push(hotdog);
       updateList(data);
       handleModal(false);
